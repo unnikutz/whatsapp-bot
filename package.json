@@ -1,6 +1,6 @@
 {
-  "name": "whatsapp-bot",
-  "version": "2.1.0",
+  "name": "WhatsAlexa",
+  "version": "3.0",
   "description": "Whatsapp Bot - Node Js",
   "main": "index.js",
   "scripts": {
