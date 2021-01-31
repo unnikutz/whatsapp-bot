@@ -1,1 +1,1 @@
-String fun;
+String fun; True
