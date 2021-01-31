@@ -2,7 +2,7 @@
 <img src="https://avatars2.githubusercontent.com/u/53950128?s=460&u=09f530e3326f710c4e0f9106f094eeea5429f86d&v=4" width="128" height="128"/>
 </p>
 <p align="center">
-<a href="#"><img title="Whatsapp-Bot" src="https://img.shields.io/badge/Whatsapp Bot-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
+<a href="#"><img title="WhatsAlexa" src="https://img.shields.io/badge/Whatsapp Bot-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
 <p align="center">
 <a href="https://github.com/ArugaZ"><img title="Author" src="https://img.shields.io/badge/AUTHOR-ARUGAZ-orange.svg?style=for-the-badge&logo=github"></a>
@@ -195,7 +195,7 @@ Fix Stuck on linux, install google chrome stable:
 ```
 
 ## Thanks to
-- [WA-Automate](https://github.com/open-wa/wa-automate-nodejs)
-- [YogaSakti](https://github.com/YogaSakti/imageToSticker)
-- [MhankBarBar](https://github.com/MhankBarBar/whatsapp-bot)
-- [dandyraka](https://github.com/dandyraka/NoBadWord)
+- [WhatsAlexa]
+- [Abhinav]
+- [Alexa]
+- [Abhijith]
