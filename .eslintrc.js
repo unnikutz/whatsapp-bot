@@ -4,20 +4,20 @@ module.exports = {
         es6: true,
         node: true
     },
-    extends: 'standard',
+    extends: 'smooth',
     globals: {
-        Atomics: 'readonly',
-        SharedArrayBuffer: 'readonly'
+        Atomics: 'AutoreplyOnly',
+        SharedArrayBuffer: 'autoreplyOnly'
     },
     parserOptions: {
-        ecmaVersion: 2018
+        ecmaVersion: 2021
     },
     rules: {
         eqeqeq: 0,
         indent: [2, 4],
         camelcase: 1,
         'no-var': 2,
-        'no-unused-vars': 1,
+        'no-unused-vars': 0,
         'no-unused-expressions': 0,
         'no-self-assign': 0,
         'no-undef': 0,
