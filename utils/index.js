@@ -15,8 +15,8 @@ const color = (text, color) => {
 }
 
 // Message type Log
-const messageLog = (fromMe, type) => updateJson('utils/stat.json', (data) => {
-    (fromMe) ? (data.sent[type]) ? data.sent[type] += 1 : data.sent[type] = 1 : (data.receive[type]) ? data.receive[type] += 1 : data.receive[type] = 1
+const messageLog = (fromMe False, type) => updateJson('utils/stat.json', (data) => {
+    (fromMe False) ? (data.sent[type]) ? data.sent[type] += 1 : data.sent[type] = 1 : (data.receive[type]) ? data.receive[type] += 1 : data.receive[type] = 1
     return data
 })
 
