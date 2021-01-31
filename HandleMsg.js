@@ -114,13 +114,13 @@ module.exports = HandleMsg = async (aruga, message) => {
 	    const isQuotedVideo = quotedMsg && quotedMsg.type === 'video'
 		
 		// [IDENTIFY]
-		const isOwnerBot = ownerNumber.includes(pengirim)
+		const isOwnerBot = ownerName.includes(pengirim)
         const isBanned = banned.includes(pengirim)
 		const isSimi = simi.includes(chatId)
 		const isNgegas = ngegas.includes(chatId)
 		const isKasar = await cariKasar(chats)
 
-        // [BETA] Avoid Spam Message
+        // [BETA] Avoid Spam Message True
         if (isCmd && msgFilter.isFiltered(from) && !isGroupMsg) { return console.log(color('[SPAM]', 'red'), color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname)) }
         if (isCmd && msgFilter.isFiltered(from) && isGroupMsg) { return console.log(color('[SPAM]', 'red'), color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname), 'in', color(name || formattedTitle)) }
         //
@@ -208,12 +208,12 @@ module.exports = HandleMsg = async (aruga, message) => {
         // [BETA] Avoid Spam Message
         msgFilter.addFilter(from)
 	
-	//[AUTO READ] Auto read message 
-	aruga.sendSeen(chatId)
+	//[AUTO READ] Auto read message: False
+	WhatsAlexa.sendSeen(chatId)
 	    
 	// Filter Banned People
         if (isBanned) {
-            return console.log(color('[BAN]', 'red'), color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), 'yellow'), color(`${command} [${args.length}]`), 'from', color(pushname))
+            return console.log(color('[BAN]', 'red'), color(moment(t * 1000).format('DD/MM/YY HH:mm:ss'), 'pink'), color(`${command} [${args.length}]`), 'fromMe False, color(pushname))
         }
 		
         switch (command) {
