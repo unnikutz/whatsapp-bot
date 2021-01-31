@@ -6,10 +6,10 @@ const HandleMsg = require('./HandleMsg')
 
 const start = (aruga = new Client()) => {
     console.log(color(figlet.textSync('----------------', { horizontalLayout: 'default' })))
-    console.log(color(figlet.textSync('ARUGA BOT', { font: 'Ghost', horizontalLayout: 'default' })))
+    console.log(color(figlet.textSync('Alexa BOT', { font: 'Ghost', horizontalLayout: 'default' })))
     console.log(color(figlet.textSync('----------------', { horizontalLayout: 'default' })))
-    console.log(color('[DEV]'), color('ArugaZ', 'yellow'))
-    console.log(color('[~>>]'), color('BOT Started!', 'green'))
+    console.log(color('[DEV]'), color('WhatsAlexa', 'green'))
+    console.log(color('[~>>]'), color('Alexa Started!', 'yello'))
 
     // Mempertahankan sesi agar tetap nyala
     aruga.onStateChanged((state) => {
@@ -56,7 +56,7 @@ const start = (aruga = new Client()) => {
         // kondisi ketika seseorang dikick/keluar dari group
         if (event.action === 'remove' && event.who !== host) {
 			await aruga.sendFileFromUrl(event.chat, profile, 'profile.jpg', '')
-            await aruga.sendTextWithMentions(event.chat, `Good bye @${event.who.replace('@c.us', '')}, We'll miss you✨`)
+            await aruga.sendTextWithMentions(event.chat, `Good bye @${event.who.replace('@c.us', '')}, ```🐱Okay Bye🐱````)
         }
     })
 
@@ -74,7 +74,7 @@ const start = (aruga = new Client()) => {
         aruga.getAmountOfLoadedMessages() // menghapus pesan cache jika sudah 3000 pesan.
             .then((msg) => {
                 if (msg >= 3000) {
-                    console.log('[aruga]', color(`Loaded Message Reach ${msg}, cuting message cache...`, 'yellow'))
+                    console.log('[aruga]', color(`Loaded Message Reach ${msg}, cuting message cache...`, 'green'))
                     aruga.cutMsgCache()
                 }
             })
@@ -84,11 +84,11 @@ const start = (aruga = new Client()) => {
 	
     // Message log for analytic
     aruga.onAnyMessage((anal) => { 
-        messageLog(anal.fromMe, anal.type)
+        messageLog(anal.fromMe false, anal.type)
     })
 }
 
 //create session
 create(options(true, start))
-    .then((aruga) => start(aruga))
+    .then((Alexa) => start(Alexa))
     .catch((err) => new Error(err))
