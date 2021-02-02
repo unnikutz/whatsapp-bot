@@ -249,20 +249,20 @@ module.exports = HandleMsg = async (aruga, message) => {
             let linkgrup = body.slice(6)
             let islink = linkgrup.match(/(https:\/\/chat.whatsapp.com)/gi)
             let chekgrup = await aruga.inviteInfo(linkgrup)
-            if (!islink) return aruga.reply(from, 'Maaf link group-nya salah! silahkan kirim link yang benar', id)
+            if (!islink) return aruga.reply(from, 'Group Link Reseted!!', id)
             if (isOwnerBot) {
                 await aruga.joinGroupViaLink(linkgrup)
                       .then(async () => {
-                          await aruga.sendText(from, 'Berhasil join grup via link!')
-                          await aruga.sendText(chekgrup.id, `Hai minna~, Im Aruga Bot. To find out the commands on this Bot type ${prefix}menu`)
+                          await aruga.sendText(from, 'Invitation link!')
+                          await aruga.sendText(chekgrup.id, `Hai Bro~, Im Foxy Bot. To find out the commands on this Bot type ${prefix}menu`)
                       })
             } else {
                 let cgrup = await aruga.getAllGroups()
-                if (cgrup.length > groupLimit) return aruga.reply(from, `Sorry, the group on this bot is full\nMax Group is: ${groupLimit}`, id)
-                if (cgrup.size < memberLimit) return aruga.reply(from, `Sorry, Bot wil not join if the group members do not exceed ${memberLimit} people`, id)
+                if (cgrup.length > groupLimit) return aruga.reply(from, `Sorry, the group on Foxy bot is full\nMax Group is: ${groupLimit}`, id)
+                if (cgrup.size < memberLimit) return aruga.reply(from, `Sorry, Foxy Bot wil not join if the group members do not exceed ${memberLimit} people`, id)
                 await aruga.joinGroupViaLink(linkgrup)
                       .then(async () =>{
-                          await aruga.reply(from, 'Berhasil join grup via link!', id)
+                          await aruga.reply(from, 'please join group via link!', id)
                       })
                       .catch(() => {
                           aruga.reply(from, 'Gagal!', id)
@@ -283,9 +283,9 @@ module.exports = HandleMsg = async (aruga, message) => {
 	case 'stimg':
             if (quotedMsg && quotedMsg.type == 'sticker') {
                 const mediaData = await decryptMedia(quotedMsg)
-                aruga.reply(from, `Sedang di proses! Silahkan tunggu sebentar...`, id)
+                aruga.reply(from, `Command processing!! Please wait ...`, id)
                 const imageBase64 = `data:${quotedMsg.mimetype};base64,${mediaData.toString('base64')}`
-                await aruga.sendFile(from, imageBase64, 'imgsticker.jpg', 'Berhasil convert Sticker to Image!', id)
+                await aruga.sendFile(from, imageBase64, 'imgsticker.jpg', 'Sucessfully converted Sticker to Image!', id)
                 .then(() => {
                     console.log(`Sticker to Image Processed for ${processTime(t, moment())} Seconds`)
                 })
@@ -298,14 +298,15 @@ module.exports = HandleMsg = async (aruga, message) => {
             if (args.length === 1) return aruga.reply(from, `Kirim perintah *${prefix}logopornhub [ |Teks1|Teks2 ]*,\n\n contoh : *${prefix}logopornhub |Dimas| HUB*`, id)
             argz = body.trim().split('|')
             if (argz.length >= 2) {
-                aruga.reply(from, `sabar brok eug proses dolo....`, id)
+                aruga.reply(from, `Please Wait.. Processing....
+....`, id)
                 const lpornhub = argz[1]
                 const lpornhub2 = argz[2]   
                 if (lpornhub > 10) return aruga.reply(from, '*Teks1 Terlalu Panjang!*\n_Maksimal 10 huruf!_', id)
                 if (lpornhub2 > 10) return aruga.reply(from, '*Teks2 Terlalu Panjang!*\n_Maksimal 10 huruf!_', id)
                 aruga.sendFileFromUrl(from, `https://docs-jojo.herokuapp.com/api/phblogo?text1=${lpornhub}&text2=${lpornhub2}`)
             } else {
-                await aruga.reply(from, `Wrong Format!\n[❗] Kirim perintah *${prefix}logopornhub [ |Teks1| Teks2 ]*,\n\n contoh : *${prefix}logopornhub |Dimas| HUB*`, id)
+                await aruga.reply(from, `Wrong Format!\n[❗]  *${prefix}logopornhub [ |Teks1| Teks2 ]*,\n\n contoh : *${prefix}logopornhub |Dimas| HUB*`, id)
             }
             break
 	case 'coolteks':
@@ -356,21 +357,21 @@ module.exports = HandleMsg = async (aruga, message) => {
             case 'antisticker':
             case 'antistiker':
                     if (!isGroupMsg) return aruga.reply(from, 'Maaf, perintah ini hanya dapat dipakai didalam grup!', id)
-                    if (!isGroupAdmins) return aruga.reply(from, 'Gagal, perintah ini hanya dapat digunakan oleh admin grup!', id)
-                    if (!isBotGroupAdmins) return aruga.reply(from, 'Wahai admin, jadikan saya sebagai admin grup dahulu :)', id)
+                    if (!isGroupAdmins) return aruga.reply(from, 'Please Make The Foxy bot As Admin of the group!', id)
+                    if (!isBotGroupAdmins) return aruga.reply(from, 'Yes group admin, jadikan saya sebagai admin grup dahulu :)', id)
                     if (args[0] == 'on') {
                         var cek = antisticker.includes(chatId);
                         if(cek){
-                            return aruga.reply(from, '*Anti Spam Sticker Detector* sudah aktif di grup ini', id) //if number already exists on database
+                            return aruga.reply(from, '*Anti Spam Sticker Detector* Don'tspam Stickers in the group!, id) //if number already exists on database
                         } else {
                             antisticker.push(chatId)
                             fs.writeFileSync('./lib/helper/antisticker.json', JSON.stringify(antisticker))
-                            aruga.reply(from, '*[Anti Sticker SPAM]* telah di aktifkan\nSetiap member grup yang spam sticker lebih dari 7 akan di kick oleh bot!', id)
+                            aruga.reply(from, '*[Anti Sticker SPAM]* telah di aktifkan\nSetiap If You Spam Sticker for 7 times, Definitely You Will Be Kicked By The Bot!!!', id)
                         }
                     } else if (args[0] == 'off') {
                         var cek = antilink.includes(chatId);
                         if(cek){
-                            return aruga.reply(from, '*Anti Spam Sticker Detector* sudah non-aktif di grup ini', id) //if number already exists on database
+                            return aruga.reply(from, '*Anti Spam Sticker Detector* Don't spam stickers on the group please!!, id) //if number already exists on database
                         } else {
                             let nixx = antisticker.indexOf(chatId)
                             antisticker.splice(nixx, 1)
