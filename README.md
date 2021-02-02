@@ -74,9 +74,9 @@ after running it you need to scan the qr
 
 ## Features
 
-| 18+ |Yes|
+| 18+ |No|
 | ------------- | ------------- |
-| Nekopoi |✅|
+| Nekopoi |🚫|
 
 | Creator |Yes|
 | ------------- | ------------- |
@@ -195,7 +195,8 @@ Fix Stuck on linux, install google chrome stable:
 ```
 
 ## Thanks to
-- [WA-Automate](https://github.com/open-wa/wa-automate-nodejs)
-- [YogaSakti](https://github.com/YogaSakti/imageToSticker)
-- [MhankBarBar](https://github.com/MhankBarBar/whatsapp-bot)
-- [dandyraka](https://github.com/dandyraka/NoBadWord)
+- [ sabari nath ]
+- [ Sreenath ]
+- [ Albin ]
+- [ Abhinav ( Me ) 😜
+- [ All Other Friends ]
