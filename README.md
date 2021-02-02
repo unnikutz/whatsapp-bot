@@ -2,7 +2,7 @@
 <img src="https://avatars2.githubusercontent.com/u/53950128?s=460&u=09f530e3326f710c4e0f9106f094eeea5429f86d&v=4" width="128" height="128"/>
 </p>
 <p align="center">
-<a href="#"><img title="Whatsapp-Bot" src="https://img.shields.io/badge/Whatsapp Bot-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
+<a href="#"><img title="Foxy Bot" src="https://img.shields.io/badge/Whatsapp Bot-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p>
 <p align="center">
 <a href="https://github.com/ArugaZ"><img title="Author" src="https://img.shields.io/badge/AUTHOR-ARUGAZ-orange.svg?style=for-the-badge&logo=github"></a>
@@ -38,8 +38,8 @@ This project require NodeJS v12.
 Clone this project
 
 ```bash
-> git clone https://github.com/ArugaZ/whatsapp-bot.git
-> cd whatsapp-bot
+> git clone https://github.com/unnikutz/Arya-BOT3.git
+> cd Foxy-bot
 ```
 
 Install the dependencies:
@@ -74,9 +74,9 @@ after running it you need to scan the qr
 
 ## Features
 
-| 18+ |Yes|
+| 18+ |No|
 | ------------- | ------------- |
-| Nekopoi |✅|
+| Nekopoi |🚫|
 
 | Creator |Yes|
 | ------------- | ------------- |
@@ -195,7 +195,8 @@ Fix Stuck on linux, install google chrome stable:
 ```
 
 ## Thanks to
-- [WA-Automate](https://github.com/open-wa/wa-automate-nodejs)
-- [YogaSakti](https://github.com/YogaSakti/imageToSticker)
-- [MhankBarBar](https://github.com/MhankBarBar/whatsapp-bot)
-- [dandyraka](https://github.com/dandyraka/NoBadWord)
+- [ sabari nath ]
+- [ Sreenath ]
+- [ Albin ]
+- [ Abhinav ( Me ) 😜
+- [ All Other Friends ]
